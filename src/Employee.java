@@ -1,18 +1,18 @@
 import java.util.Objects;
 
 public class Employee {
-    private String name;
+    private final String name;
     private int salary;
     private int department;
-    private static int counter = 0;
-    private int id;
+    private static int counterId = 0;
+    private final int id;
 
     public Employee(String name, int salary, int department) {
         this.name = name;
         this.salary = salary;
         this.department = department;
-        counter++;
-        this.id = counter;
+        counterId++;
+        this.id = counterId;
     }
 
     public String getName() {
@@ -31,8 +31,8 @@ public class Employee {
         return id;
     }
 
-    public static int getCounter() {
-        return counter;
+    public static int getCounterId() {
+        return counterId;
     }
 
     public void setSalary(int salary) {
